@@ -51,6 +51,10 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+}
+
 body {
   margin: 0 auto 0 auto;
   counter-reset: section;
@@ -72,56 +76,60 @@ footer {
 .hero {
   background-color: #181b18;
 }
-.hero .active {
-  background-color: #aaa;
-}
-.hero .slider {
+.hero .slider-container {
   position: relative;
-  margin: auto;
-  margin-bottom: 25px;
+  height: 800px;
 }
-.hero .slider .item {
-  width: 100%;
-  height: 100%;
-}
-.hero .slider .item img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  border: none !important;
-  box-shadow: none !important;
-}
-.hero .slider .prev, .hero .slider .next {
-  padding: 13px;
-  margin: -10px -50px;
+.hero .slider-container .prev, .hero .slider-container .next {
   position: absolute;
-  top: 0;
-  top: 50%;
-  width: auto;
-  cursor: pointer;
+  top: 40%;
   font-size: 50px;
   font-weight: bold;
   color: white;
+  cursor: pointer;
   transition: 0.6s ease;
+  background-color: transparent;
 }
-.hero .slider .next {
+.hero .slider-container .prev:hover, .hero .slider-container .next:hover {
+  color: #96be34;
+}
+.hero .slider-container .next {
   right: 0;
 }
-.hero .slider-dots {
-  padding-bottom: 30px;
-  text-align: center;
+.hero .slider-container .slider {
+  display: flex;
+  margin: 0 auto 25px;
 }
-.hero .slider-dots .slider-dots_item {
-  display: inline-block;
+.hero .slider-container .slider .item {
+  display: none;
+  flex-shrink: 0;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+.hero .slider-container .slider .item.active {
+  display: block;
+}
+.hero .slider-container .slider .item img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.hero .slider-container .slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding-bottom: 30px;
+}
+.hero .slider-container .slider-dots .dots_item {
   height: 12px;
   width: 12px;
-  margin: 0 2px;
   border-radius: 50%;
   cursor: pointer;
   background-color: #aaa;
   transition: background-color 0.6s ease;
 }
-.hero .slider-dots .slider-dots_item:hover {
+.hero .slider-container .slider-dots .dots_item.active, .hero .slider-container .slider-dots .dots_item:hover {
   background-color: #96be34;
 }
 

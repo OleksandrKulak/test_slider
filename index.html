@@ -12,47 +12,49 @@
 <body>
 	<section class="hero">
 		<div class="container">
-			<ul class="slider">
-			    <li class="item">
-			        <img src="assets/img/01.jpg" alt="Первый слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/02.jpg" alt="Второй слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/03.jpg" alt="Третий слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/04.jpg" alt="Третий слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/05.jpg" alt="Третий слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/06.jpg" alt="Третий слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/07.jpg" alt="Третий слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/08.jpg" alt="Третий слайд">
-			    </li>
-			    <li class="item">
-			        <img src="assets/img/09.jpg" alt="Третий слайд">
-			    </li>
-			    <a class="prev" onclick="minusSlide()">&#10094;</a>
-			    <a class="next" onclick="plusSlide()">&#10095;</a>
-			</ul>
-			<div class="slider-dots">
-			    <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
-			    <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
-			    <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-			    <span class="slider-dots_item" onclick="currentSlide(4)"></span> 
-			    <span class="slider-dots_item" onclick="currentSlide(5)"></span> 
-			    <span class="slider-dots_item" onclick="currentSlide(6)"></span>
-			    <span class="slider-dots_item" onclick="currentSlide(7)"></span> 
-			    <span class="slider-dots_item" onclick="currentSlide(8)"></span> 
-			    <span class="slider-dots_item" onclick="currentSlide(9)"></span>   
+			<div class="slider-container">
+				<button id="prev" class="prev">&#10094;</button>
+				<ul id="slider" class="slider">
+				    <li data-id="1" class="item active">
+				        <img src="assets/img/01.jpg" alt="coffy">
+				    </li>
+				    <li data-id="2" class="item">
+				        <img src="assets/img/02.jpg" alt="cake">
+				    </li>
+				    <li data-id="3" class="item">
+				        <img src="assets/img/03.jpg" alt="cake">
+				    </li>
+				    <li data-id="4" class="item">
+				        <img src="assets/img/04.jpg" alt="cake">
+				    </li>
+				    <li data-id="5" class="item">
+				        <img src="assets/img/05.jpg" alt="cake">
+				    </li>
+				    <li data-id="6" class="item">
+				        <img src="assets/img/06.jpg" alt="salad">
+				    </li>
+				    <li data-id="7" class="item">
+				        <img src="assets/img/07.jpg" alt="sandwich">
+				    </li>
+				    <li data-id="8" class="item">
+				        <img src="assets/img/08.jpg" alt="hamburger">
+				    </li>
+				    <li data-id="9" class="item">
+				        <img src="assets/img/09.jpg" alt="ice">
+				    </li>
+				</ul>
+				<button id="next" class="next">&#10095;</button>
+				<ul id="slider-dots" class="slider-dots">
+				    <li data-id="1" class="dots_item active"></span> 
+				    <li data-id="2" class="dots_item"></li> 
+				    <li data-id="3" class="dots_item"></li>
+				    <li data-id="4" class="dots_item"></li> 
+				    <li data-id="5" class="dots_item"></li> 
+				    <li data-id="6" class="dots_item"></li>
+				    <li data-id="7" class="dots_item"></li> 
+				    <li data-id="8" class="dots_item"></li> 
+				    <li data-id="9" class="dots_item"></li>   
+				</ul>
 			</div>
 		</div>
 	</section>
